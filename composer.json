@@ -9,5 +9,10 @@
 		   "email": "dinara.akhmetzhanova@gmail.com"
 	    }
     ],
-    "license": "MIT"
+    "license": "MIT",
+    "autoload": {
+	    "files": [
+		    "src/Cli.php"
+	    ]
+    }
 }
