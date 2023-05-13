@@ -1,7 +1,6 @@
 {
 "bin": ["bin/brain-games"],      
     "name": "hexlet/code",
-    "require": {},
     "description": "hexlet php-project",
     "authors": [
 	    {
@@ -14,5 +13,8 @@
 	    "files": [
 		    "src/Cli.php"
 	    ]
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*"
     }
 }
