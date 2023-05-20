@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b070bedcd3d23e1debaf5b56192c880",
+    "content-hash": "c7af1f297cf4ddfdbc5c400623909aa7",
     "packages": [],
     "packages-dev": [
         {
@@ -79,6 +79,69 @@
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
             "time": "2015-01-21T22:44:05+00:00"
+        },
+        {
+            "name": "wp-cli/php-cli-tools",
+            "version": "v0.11.18",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-cli/php-cli-tools.git",
+                "reference": "0f503a790698cb36cf835e5c8d09cd4b64bf2325"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/0f503a790698cb36cf835e5c8d09cd4b64bf2325",
+                "reference": "0f503a790698cb36cf835e5c8d09cd4b64bf2325",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3.0"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-latest",
+                "wp-cli/wp-cli-tests": "^3.1.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/cli/cli.php"
+                ],
+                "psr-0": {
+                    "cli": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Bachhuber",
+                    "email": "daniel@handbuilt.co",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "James Logsdon",
+                    "email": "jlogsdon@php.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Console utilities for PHP",
+            "homepage": "http://github.com/wp-cli/php-cli-tools",
+            "keywords": [
+                "cli",
+                "console"
+            ],
+            "support": {
+                "issues": "https://github.com/wp-cli/php-cli-tools/issues",
+                "source": "https://github.com/wp-cli/php-cli-tools/tree/v0.11.18"
+            },
+            "time": "2023-04-04T16:03:53+00:00"
         }
     ],
     "aliases": [],

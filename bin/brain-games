@@ -1,2 +1,6 @@
 #!/usr/bin/php
-require_once_DIR_. '/../vendor/autoload.php';  
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+use function src\Cli\welcome;
+return welcome($name);

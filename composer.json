@@ -1,5 +1,8 @@
 {
-"bin": ["bin/brain-games"],      
+"bin": [
+	"bin/brain-games",
+	"bin/brain-even"
+],      
     "name": "hexlet/code",
     "description": "hexlet php-project",
     "authors": [
@@ -15,6 +18,7 @@
 	    ]
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "*"
+        "squizlabs/php_codesniffer": "*",
+		"wp-cli/php-cli-tools": "^0.11.18"
     }
 }
