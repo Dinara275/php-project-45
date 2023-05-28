@@ -14,7 +14,8 @@
     "license": "MIT",
     "autoload": {
 	    "files": [
-		    "src/Cli.php"
+		    "src/Cli.php",
+		    "src/Greet.php"
 	    ]
     },
     "require-dev": {
