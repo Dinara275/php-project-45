@@ -1,6 +1,7 @@
 
 install:
 	composer install
+	brew install asciinema
 brain-games:
 	./bin/brain-games
 validate:
