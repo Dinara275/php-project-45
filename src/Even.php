@@ -8,13 +8,15 @@ use function cli\prompt;
 function welcome()
 {
 	line("Welcome to the Brain Games!");
+	global $name;
 	$name = prompt("May I have your name?");
 	line("Hello, %s!", $name);
 	line('Answer "yes" if the number is even, otherwise answer "no".');
 }
 function play()
 {
-	for ($i = 0; $i < 3; $i++) {
+	global $name;
+		for ($i = 0; $i < 3; $i++) {
 		$number = rand();
 	        $correctAnswer = $number % 2 === 0 ? 'yes' : 'no';
 		$answer = prompt("Question: {$number}");
