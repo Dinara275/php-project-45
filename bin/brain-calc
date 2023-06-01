@@ -2,6 +2,5 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function phpProject45\src\Engine\describe;
-$gamePurpose = 'What is the result of the expression?';	
-describe($gamePurpose);	
+use function src\Games\Calc\calculate;
+calculate();	
