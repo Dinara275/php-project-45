@@ -15,8 +15,6 @@ $b = rand(0, 100);
 $operation = ['+', '-', '*'];
 $operationChoice = array_rand($operation, 1);
 $finalOperation = $operation[$operationChoice];
-global $answer; 
-global $correctAnswer; 
 $expression = "{$a} {$finalOperation} {$b}";
 $answer = (int)prompt("Question: {$expression}");
 line("Your answer: {$answer}");
