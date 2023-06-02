@@ -17,14 +17,15 @@ $operationChoice = array_rand($operation, 1);
 $finalOperation = $operation[$operationChoice];
 global $answer; 
 global $correctAnswer; 
-$answer = prompt('Question: {$a} {$finalOperation} {$b}');
-line('Your answer: {$answer}');
+$expression = "{$a} {$finalOperation} {$b}";
+$answer = (int)prompt("Question: {$expression}");
+line("Your answer: {$answer}");
 if ($finalOperation === '+') {
-	$correctAnswer = $a + $b;
+	$correctAnswer = (int)($a + $b);
 } elseif ($finalOperation === '-') {
-	$correctAnswer = $a - $b;
+	$correctAnswer = (int)($a - $b);
 } else {
-	$correctAnswer = $a * $b; 
+	$correctAnswer = (int)($a * $b); 
 }
 };
 describe($gamePurpose, $round);

@@ -11,11 +11,11 @@ function describe($gamePurpose, $round)
 	$name = prompt("May I have your name?");
 	line("Hello, %s!", $name);
 	line($gamePurpose);
-	 global $answer;
-	 global $correctAnswer;
-	[$answer, $correctAnswer] = $round();
-	for ($i = 0; $i < 3; $i++) {
-		$round = [$answer, $correctAnswer];
+	 for ($i = 0; $i < 3; $i++) {
+		  global $answer;
+		           global $correctAnswer;
+		 [$answer, $correctAnswer] = $round();
+		
 	       	if ($answer === $correctAnswer) {
 			line('Correct!');
 		} else {
