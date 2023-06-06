@@ -4,6 +4,7 @@ namespace phpProject45\src\Engine;
 
 use function cli\line;
 use function cli\prompt;
+use function src\Games\Gcd\divide;
 
 function describe($gamePurpose, $round)
 {
@@ -11,17 +12,18 @@ function describe($gamePurpose, $round)
 	$name = prompt("May I have your name?");
 	line("Hello, %s!", $name);
 	line($gamePurpose);
-	 for ($i = 0; $i < 3; $i++) {
-		  [$answer, $correctAnswer] = $round();
-		
-	       	if ($answer !== $correctAnswer) {
-		    line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
-		    line("Let's try again, %s!", $name);
-		return;
-		} else {
+	for ($i = 0; $i < 3; $i++) {
+		[$answer, $correctAnswer] = $round();
+		 var_dump('answer: ' . $answer);
+		 var_dump('correctAnswer: ' . $correctAnswer);
+		if ((int)$answer === (int)$correctAnswer) {
 			line('Correct!');
-		}
-	}
-	line("Congratulations, %s!", $name);
+		} else {
+			line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
+			line("Let's try again, %s!", $name);
+		return;
+		}	  
+       	}       	
+line("Congratulations, %s!", $name);
 }
 
