@@ -25,6 +25,7 @@ if ($finalOperation === '+') {
 } else {
 	$correctAnswer = (int)($a * $b); 
 }
+return [$answer, $correctAnswer];
 };
 describe($gamePurpose, $round);
 }

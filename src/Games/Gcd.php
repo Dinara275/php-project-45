@@ -27,8 +27,9 @@ function divide()
 		}
 		}
 		 
+return [$answer, $correctAnswer];
 	};
-	describe($gamePurpose, $round);
+		describe($gamePurpose, $round);
 }
 
 

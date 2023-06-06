@@ -5,6 +5,7 @@ namespace phpProject45\src\Engine;
 use function cli\line;
 use function cli\prompt;
 use function src\Games\Gcd\divide;
+use function src\Games\Calc\calculate;
 
 function describe($gamePurpose, $round)
 {
@@ -14,8 +15,6 @@ function describe($gamePurpose, $round)
 	line($gamePurpose);
 	for ($i = 0; $i < 3; $i++) {
 		[$answer, $correctAnswer] = $round();
-		 var_dump('answer: ' . $answer);
-		 var_dump('correctAnswer: ' . $correctAnswer);
 		if ((int)$answer === (int)$correctAnswer) {
 			line('Correct!');
 		} else {
