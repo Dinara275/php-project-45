@@ -1,16 +1,18 @@
 <?php
 
-namespace phpProject45\src\Even;
+namespace src\Games\Even;
 
-use function phpProject45\src\Engine\describe;
+use function src\Engine\start;
 use function cli\line;
 use function cli\prompt;
+
+const ROUNDS = 3;
 
 function play()
 {
     $gamePurpose = 'Answer "yes" if the number is even, otherwise answer "no".';
     $round = function () {
-        for ($i = 0; $i < 3; $i++) {
+        for ($i = 0; $i < ROUNDS; $i++) {
             $number = rand();
             $correctAnswer = $number % 2 === 0 ? 'yes' : 'no';
             $answer = prompt("Question: {$number}");
@@ -18,5 +20,5 @@ function play()
             return [$answer, $correctAnswer];
         }
     };
-    describe($gamePurpose, $round);
+    start($gamePurpose, $round);
 }

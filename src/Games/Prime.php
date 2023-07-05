@@ -2,7 +2,7 @@
 
 namespace src\Games\Prime;
 
-use function phpProject45\src\Engine\describe;
+use function src\Engine\start;
 use function cli\line;
 use function cli\prompt;
 
@@ -16,7 +16,7 @@ function solve()
             $correctAnswer = isPrime($a) ? 'yes' : 'no';
             return [$answer, $correctAnswer];
         };
-    describe($gamePurpose, $round);
+    start($gamePurpose, $round);
 }
 function isPrime($a): bool
 {

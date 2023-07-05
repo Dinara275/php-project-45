@@ -1,5 +1,5 @@
 #!/usr/bin/env php
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
-use function phpProject45\src\Even\play;
+use function src\Games\Even\play;
 play();

@@ -2,7 +2,7 @@
 
 namespace src\Games\Calc;
 
-use function phpProject45\src\Engine\describe;
+use function src\Engine\start;
 use function cli\line;
 use function cli\prompt;
 
@@ -27,5 +27,5 @@ function calculate()
         }
         return [$answer, $correctAnswer];
     };
-    describe($gamePurpose, $round);
+    start($gamePurpose, $round);
 }
