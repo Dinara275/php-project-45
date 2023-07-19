@@ -12,8 +12,8 @@ function divide()
 {
     $gamePurpose = 'Find the greatest common divisor of given numbers.';
     $round = function () {
-        $a = rand(0, 100);
-        $b = rand(0, 100);
+        $a = rand(1, 100);
+        $b = rand(1, 100);
         $answer = (int)prompt("Question: {$a} {$b}");
         line("Your answer: {$answer}");
         if ($a > $b) {
