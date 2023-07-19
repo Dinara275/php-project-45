@@ -27,7 +27,7 @@
 		    "src/Games/Prime.php"	    
 	    ]
     },
-    "require-dev": {
+    "require": {
         "squizlabs/php_codesniffer": "*",
 		"wp-cli/php-cli-tools": "^0.11.18"
     }
