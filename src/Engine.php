@@ -14,7 +14,7 @@ function start($gamePurpose, $round)
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
     line("Hello, %s!", $name);
-    
+
     line($gamePurpose);
 
     for ($i = 0; $i < ROUNDS; $i++) {
