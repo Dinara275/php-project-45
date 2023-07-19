@@ -19,11 +19,11 @@ function solve()
         $answer = (int)prompt("Question: {$arr_view}");
         line("Your answer: {$answer}");
         if ($index !== count($arr) - 1) {
-            $correctAnswer = $arr[$index + 1] - $c;
+            $correctAnswer = (int) $arr[$index + 1] - $c;
         } elseif ($index === 0) {
             $correctAnswer = $a;
         } else {
-            $correctAnswer = $arr[$index - 1] + $c;
+            $correctAnswer = (int) $arr[$index - 1] + $c;
         }
         return [$answer, $correctAnswer];
     };

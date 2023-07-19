@@ -19,11 +19,11 @@ function calculate()
         $answer = (int)prompt("Question: {$expression}");
         line("Your answer: {$answer}");
         if ($finalOperation === '+') {
-            $correctAnswer = (int)($a + $b);
+            $correctAnswer = ($a + $b);
         } elseif ($finalOperation === '-') {
-            $correctAnswer = (int)($a - $b);
+            $correctAnswer = ($a - $b);
         } else {
-            $correctAnswer = (int)($a * $b);
+            $correctAnswer = ($a * $b);
         }
         return [$answer, $correctAnswer];
     };

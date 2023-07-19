@@ -18,7 +18,7 @@ function solve()
         };
     start($gamePurpose, $round);
 }
-function isPrime($a): bool
+function isPrime(int $a): bool
 {
     if ($a < 2) {
         return false;

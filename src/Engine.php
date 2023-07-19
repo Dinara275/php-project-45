@@ -9,7 +9,7 @@ use function src\Games\Calc\calculate;
 
 const ROUNDS = 3;
 
-function start($gamePurpose, $round)
+function start(string $gamePurpose, callable $round)
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
