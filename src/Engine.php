@@ -16,11 +16,11 @@ function start($gamePurpose, $round)
     line("Hello, %s!", $name);
     
     line($gamePurpose);
-    
+
     for ($i = 0; $i < ROUNDS; $i++) {
         [$answer, $correctAnswer] = $round();
-	
-	if ($answer !== $correctAnswer) {
+
+        if ($answer !== $correctAnswer) {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
             line("Let's try again, %s!", $name);
             return;
