@@ -1,5 +1,5 @@
 #!/usr/bin/env php
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
-use function src\Games\Even\play;
+use function BrainGames\Games\Even\play;
 play();

@@ -1,11 +1,11 @@
 <?php
 
-namespace src\Engine;
+namespace BrainGames\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function src\Games\Gcd\divide;
-use function src\Games\Calc\calculate;
+use function BrainGames\Games\Gcd\divide;
+use function BrainGames\Games\Calc\calculate;
 
 const ROUNDS = 3;
 

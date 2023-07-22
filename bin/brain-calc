@@ -2,5 +2,5 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function src\Games\Calc\calculate;
+use function BrainGames\Games\Calc\calculate;
 calculate();	

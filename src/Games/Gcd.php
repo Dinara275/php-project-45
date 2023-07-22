@@ -1,8 +1,8 @@
 <?php
 
-namespace src\Games\Gcd;
+namespace BrainGames\Games\Gcd;
 
-use function src\Engine\start;
+use function BrainGames\Engine\start;
 use function cli\line;
 use function cli\prompt;
 

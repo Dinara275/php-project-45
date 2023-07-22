@@ -2,5 +2,5 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function src\Games\Gcd\divide;
+use function BrainGames\Games\Gcd\divide;
 divide();
