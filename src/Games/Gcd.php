@@ -8,28 +8,31 @@ use function cli\prompt;
 
 const ROUNDS = 3;
 
-function divide()
+function playGcd()
 {
     $gamePurpose = 'Find the greatest common divisor of given numbers.';
     $round = function () {
-        $a = rand(1, 100);
-        $b = rand(1, 100);
-        $answer = (int)prompt("Question: {$a} {$b}");
-        line("Your answer: {$answer}");
-        if ($a > $b) {
-            $c = $b;
-        } else {
-            $c = $a;
-        }
-        $correctAnswer = 1;
-        for ($j = 0; $j < ROUNDS; $j++) {
-            for ($i = 1; $i <= $c; $i++) {
-                if ((($a % $i) === 0) and (($b % $i) === 0) and ($i > $correctAnswer)) {
-                    $correctAnswer = $i;
-                }
-            }
-        }
+        $num1 = rand(1, 100);
+        $num2 = rand(1, 100);
+        $answer = (int)prompt("Question: {$num1} {$num2}");
+        $correctAnswer = findCommonDivider($num1, $num2);
         return [$answer, $correctAnswer];
     };
     start($gamePurpose, $round);
+}
+
+function findCommonDivider($num1, $num2)
+{
+	if ($num1 > $num2) {
+            $num3 = $num2;
+        } else {
+            $num3 = $num1;
+        }
+        $correctAnswer = 1;
+        for ($i = 1; $i <= $num3; $i++) {
+            if ((($num1 % $i) === 0) and (($num2 % $i) === 0) and ($i > $correctAnswer)) {
+                $correctAnswer = $i;
+            }
+	}
+	return $correctAnswer;
 }

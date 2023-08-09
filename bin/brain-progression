@@ -2,5 +2,5 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function BrainGames\Games\Progression\solve;
-solve();
+use function BrainGames\Games\Progression\playProgression;
+playProgression();

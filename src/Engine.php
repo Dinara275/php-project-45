@@ -4,12 +4,11 @@ namespace BrainGames\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Games\Gcd\divide;
-use function BrainGames\Games\Calc\calculate;
+
 
 const ROUNDS = 3;
 
-function start(string $gamePurpose, callable $round)
+function start(string $gamePurpose, callable $getRound)
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
@@ -18,9 +17,11 @@ function start(string $gamePurpose, callable $round)
     line($gamePurpose);
 
     for ($i = 0; $i < ROUNDS; $i++) {
-        [$answer, $correctAnswer] = $round();
-
-        if ($answer !== $correctAnswer) {
+        [$answer, $correctAnswer] = $getRound();
+	
+	line("Your answer: {$answer}");
+	
+	if ($answer !== $correctAnswer) {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
             line("Let's try again, %s!", $name);
             return;

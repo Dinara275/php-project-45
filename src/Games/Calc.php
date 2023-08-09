@@ -10,21 +10,27 @@ function calculate()
 {
     $gamePurpose = 'What is the result of the expression?';
     $round = function () {
-        $a = rand(0, 100);
-        $b = rand(0, 100);
+        $num1 = rand(0, 100);
+        $num2 = rand(0, 100);
         $operation = ['+', '-', '*'];
         $operationChoice = array_rand($operation, 1);
         $finalOperation = $operation[$operationChoice];
-        $expression = "{$a} {$finalOperation} {$b}";
+        $expression = "{$num1} {$finalOperation} {$num2}";
         $answer = (int)prompt("Question: {$expression}");
-        line("Your answer: {$answer}");
-        if ($finalOperation === '+') {
-            $correctAnswer = ($a + $b);
-        } elseif ($finalOperation === '-') {
-            $correctAnswer = ($a - $b);
-        } else {
-            $correctAnswer = ($a * $b);
-        }
+        
+	switch ($finalOperation) {
+	    case '+':
+		    $correctAnswer = ($num1 + $num2);
+		    break;
+            case '-':
+		    $correctAnswer = ($num1 - $num2);
+		    break;
+	    case '*':
+		    $correctAnswer = ($num1 * $num2);
+		    break;
+	    default:
+		    throw new Error ('Uknown state!');
+        }	
         return [$answer, $correctAnswer];
     };
     start($gamePurpose, $round);
