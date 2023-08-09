@@ -17,20 +17,19 @@ function calculate()
         $finalOperation = $operation[$operationChoice];
         $expression = "{$num1} {$finalOperation} {$num2}";
         $answer = (int)prompt("Question: {$expression}");
-        
-	switch ($finalOperation) {
-	    case '+':
-		    $correctAnswer = ($num1 + $num2);
-		    break;
+        switch ($finalOperation) {
+            case '+':
+                $correctAnswer = ($num1 + $num2);
+                break;
             case '-':
-		    $correctAnswer = ($num1 - $num2);
-		    break;
-	    case '*':
-		    $correctAnswer = ($num1 * $num2);
-		    break;
-	    default:
-		    throw new Error ('Uknown state!');
-        }	
+                $correctAnswer = ($num1 - $num2);
+                break;
+            case '*':
+                $correctAnswer = ($num1 * $num2);
+                break;
+            default:
+                throw new Error ('Uknown state!');
+        }
         return [$answer, $correctAnswer];
     };
     start($gamePurpose, $round);

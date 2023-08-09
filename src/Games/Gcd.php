@@ -23,16 +23,16 @@ function playGcd()
 
 function findCommonDivider($num1, $num2)
 {
-	if ($num1 > $num2) {
-            $num3 = $num2;
-        } else {
-            $num3 = $num1;
+    if ($num1 > $num2) {
+        $num3 = $num2;
+    } else {
+        $num3 = $num1;
+    }
+    $correctAnswer = 1;
+    for ($i = 1; $i <= $num3; $i++) {
+        if ((($num1 % $i) === 0) and (($num2 % $i) === 0) and ($i > $correctAnswer)) {
+            $correctAnswer = $i;
         }
-        $correctAnswer = 1;
-        for ($i = 1; $i <= $num3; $i++) {
-            if ((($num1 % $i) === 0) and (($num2 % $i) === 0) and ($i > $correctAnswer)) {
-                $correctAnswer = $i;
-            }
-	}
-	return $correctAnswer;
+    }
+    return $correctAnswer;
 }

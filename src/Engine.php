@@ -17,7 +17,7 @@ function start(string $gamePurpose, callable $getRound)
 
     for ($i = 0; $i < ROUNDS; $i++) {
         [$answer, $correctAnswer] = $getRound();
-	line("Your answer: {$answer}");
+        line("Your answer: {$answer}");
         if ($answer !== $correctAnswer) {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
             line("Let's try again, %s!", $name);
