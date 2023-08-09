@@ -21,7 +21,7 @@ function playGcd()
     start($gamePurpose, $round);
 }
 
-function findCommonDivider($num1, $num2)
+function findCommonDivider(int $num1, int $num2)
 {
     if ($num1 > $num2) {
         $num3 = $num2;

@@ -28,7 +28,7 @@ function calculate()
                 $correctAnswer = ($num1 * $num2);
                 break;
             default:
-                throw new Error('Uknown state!');
+                $correctAnswer = 'Uknown state!';
         }
         return [$answer, $correctAnswer];
     };
