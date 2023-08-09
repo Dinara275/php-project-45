@@ -5,7 +5,6 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-
 const ROUNDS = 3;
 
 function start(string $gamePurpose, callable $getRound)
@@ -18,10 +17,8 @@ function start(string $gamePurpose, callable $getRound)
 
     for ($i = 0; $i < ROUNDS; $i++) {
         [$answer, $correctAnswer] = $getRound();
-	
 	line("Your answer: {$answer}");
-	
-	if ($answer !== $correctAnswer) {
+        if ($answer !== $correctAnswer) {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
             line("Let's try again, %s!", $name);
             return;
