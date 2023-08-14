@@ -24,6 +24,7 @@ function start(string $gamePurpose, callable $getRound)
             return;
         }
     }
+
     line("Correct!");
     line("Congratulations, %s!", $name);
 }

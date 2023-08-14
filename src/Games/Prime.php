@@ -8,13 +8,13 @@ use function cli\prompt;
 
 function playPrime()
 {
-        $gamePurpose = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-        $round = function () {
-            $num = rand(1, 100);
-            $answer = prompt("Question: {$num}");
-            $correctAnswer = isPrime($num) ? 'yes' : 'no';
-            return [$answer, $correctAnswer];
-        };
+    $gamePurpose = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $round = function () {
+        $num = rand(1, 100);
+        $answer = prompt("Question: {$num}");
+        $correctAnswer = isPrime($num) ? 'yes' : 'no';
+        return [$answer, $correctAnswer];
+    };
     start($gamePurpose, $round);
 }
 function isPrime(int $num): bool
